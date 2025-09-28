@@ -163,6 +163,11 @@ const ModernMinimalistCafe = () => {
     setMobileNavOpen(false);
   };
 
+  const handleSocialClick = (e, platform) => {
+    e.preventDefault();
+    alert(`Opening ${platform} page... (Demo)`);
+  };
+
   if (showMenuPage) {
     return (
       <div className="menu-page">
@@ -373,18 +378,34 @@ const ModernMinimalistCafe = () => {
           <p className="subtitle">{t.followJourney}</p>
           
           <div className="social-links">
-            <a href="#" className="social-link">
+            <button 
+              onClick={(e) => handleSocialClick(e, 'Facebook')} 
+              className="social-link"
+              aria-label="Visit our Facebook page"
+            >
               <Facebook size={20} />
-            </a>
-            <a href="#" className="social-link">
+            </button>
+            <button 
+              onClick={(e) => handleSocialClick(e, 'Instagram')} 
+              className="social-link"
+              aria-label="Visit our Instagram page"
+            >
               <Instagram size={20} />
-            </a>
-            <a href="#" className="social-link">
+            </button>
+            <button 
+              onClick={(e) => handleSocialClick(e, 'Twitter')} 
+              className="social-link"
+              aria-label="Visit our Twitter page"
+            >
               <Twitter size={20} />
-            </a>
-            <a href="#" className="social-link">
+            </button>
+            <button 
+              onClick={(e) => handleSocialClick(e, 'LinkedIn')} 
+              className="social-link"
+              aria-label="Visit our LinkedIn page"
+            >
               <Linkedin size={20} />
-            </a>
+            </button>
           </div>
         </div>
       </section>
