@@ -189,7 +189,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to br, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), transparent);
 }
 
 .hero-content {
@@ -420,6 +420,8 @@ h2 {
   text-decoration: none;
   color: var(--primary-dark);
   transition: all 0.3s ease;
+  background: none;
+  cursor: pointer;
 }
 
 .social-link svg {
